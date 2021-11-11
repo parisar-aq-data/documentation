@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "0198b663-3611-4b3e-802d-9539760a16a5",
+		"name": "Parisar air quality",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getLatestData-local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date1\": \"2021-06-12\",\n    \"categories\": [\n        \"iudx\",\n        \"safar\",\n        \"ward\"\n    ],\n    \"time\": \"12:00:00\",\n    \"idsList\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5600/API/getLatestData",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"API",
+						"getLatestData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLatestData-server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date1\": \"2021-06-12\",\n    \"categories\": [\n        \"iudx\",\n        \"safar\",\n        \"ward\"\n    ],\n    \"time\": \"12:00:00\",\n    \"idsList\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://server2.nikhilvj.co.in/airdata_api/API/getLatestData",
+					"protocol": "https",
+					"host": [
+						"server2",
+						"nikhilvj",
+						"co",
+						"in"
+					],
+					"path": [
+						"airdata_api",
+						"API",
+						"getLatestData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
